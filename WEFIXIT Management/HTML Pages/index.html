@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Boxicons CDN Link-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--CSS import-->
+    <link rel="stylesheet" href="/CSS/style.css">
+
+    <title>WEFIXIT</title>
+</head>
+<body>
+
+    <!--Sidebar Code Initiation-->
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <i class='bx bx-log-in-circle'></i>
+                <div class="logo_name">WEFIXIT</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav_list">
+            <li>
+                    <i class='bx bx-search' ></i>
+                    <input type="text" placeholder="Search...">
+                <span class="tooltip">Search</span>
+            </li>
+            <li>
+                <a href="#" class="dashboard">
+                    <i class='bx bx-grid-alt' ></i>
+                    <span class="links_name">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="#" class="user">
+                    <i class='bx bx-user-circle'></i>
+                    <span class="links_name">User</span>
+                </a>
+                <span class="tooltip">User</span>
+            </li>
+            <li>
+                <a href="#" class="admintools">
+                    <i class='bx bx-line-chart'></i>
+                    <span class="links_name">Admin Tools</span>
+                </a>
+                <span class="tooltip">Admin Tools</span>
+            </li>
+            <li>
+                <a href="#" class="transactions">
+                    <i class='bx bx-transfer' ></i>
+                    <span class="links_name">Transactions</span>
+                </a>
+                <span class="tooltip">Transactions</span>
+            </li>
+            <li>
+                <a href="#" class="copyrights">
+                    <i class='bx bx-copyright'></i>
+                    <span class="links_name">Copyrights</span>
+                </a>
+                <span class="tooltip">Copyrights</span>
+            </li>
+            <li>
+                <a href="#" class="settings">
+                    <i class='bx bx-cog' ></i>
+                    <span class="links_name">Settings</span>
+                </a>
+                <span class="tooltip">Settings</span>
+            </li>
+        </ul>
+        <div class="profile_content">
+            <div class="profile">
+                <div class="profile_details">
+                    <img src="/Profile.png" alt="">
+                    <div class="name_job">
+                        <div class="name">%username%</div>
+                        <div class="job">Administrator</div>
+                    </div>
+                </div>
+                <i class='bx bx-log-out-circle' id="log_out"></i>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let btn = document.querySelector("#btn");
+        let sidebar = document.querySelector(".sidebar");
+        let searchBtn = document.querySelector(".bx-search");
+
+        btn.onclick = function() {
+            sidebar.classList.toggle("active");
+        }
+
+        searchBtn.onclick = function() {
+            sidebar.classList.toggle("active");
+        }
+    </script>
+    <!--Sidebar Code Conclusion-->
+ 
+    <!--Dashboard Code Initiation-->
+    <div class="dashboard_content">
+        <div class="text">DASHBOARD(WIP)</div>
+    </div>
+    <!--Dashboard Code Conclusion-->
+
+    <!--User Code Initiation-->
+    <div class="user_content">
+        <div class="text">USER(WIP)</div>
+    </div>
+
+    
+    <!--User Code Conclusion-->
+
+    <!--Admin Tools Code Initiation-->
+    <div class="admintools_content">
+        <div class="text">ADMIN TOOLS(WIP)</div>
+    </div>
+    <!--Admin Tools Code Conclusion-->
+
+    <!--Transactions Code Initiation-->
+    <div class="transactions_content">
+        <div class="text">TRANSACTIONS(WIP)</div>
+    </div>
+    <!--Transactions Code Conclusion-->
+
+    <!--Copyrights Code Initiation-->
+    <div class="copyrights_content">
+        <div class="text">COPYRIGHTS(WIP)</div>
+    </div>
+    <!--Copyrights Code Conclusion-->
+
+    <!--Settings Code Initiation-->
+    <div class="settings_content">
+        <div class="text">SETTINGS(WIP)</div>
+    </div>
+    <!--Settings Code Conclusion--> 
+
+    <script>
+        let dashboard = document.querySelector(".dashboard");
+        let user = document.querySelector(".user")
+        let admintools = document.querySelector(".admintools");
+        let transactions = document.querySelector(".transactions");
+        let copyrights = document.querySelector(".copyrights");
+        let settings = document.querySelector(".settings");
+        let dashboard_content = document.querySelector(".dashboard_content");
+        let user_content = document.querySelector(".user_content")
+        let admintools_content = document.querySelector(".admintools_content");
+        let transactions_content = document.querySelector(".transactions_content");
+        let copyrights_content = document.querySelector(".copyrights_content");
+        let settings_content = document.querySelector(".settings_content");
+        
+        dashboard_content.classList.add("active")
+
+        dashboard.onclick = function() {
+            dashboard_content.classList.add("active");
+            user_content.classList.remove("active");
+            admintools_content.classList.remove("active");
+            transactions_content.classList.remove("active");
+            copyrights_content.classList.remove("active");
+            settings_content.classList.remove("active");
+        }
+        user.onclick = function() {
+            dashboard_content.classList.remove("active");
+            user_content.classList.add("active");
+            admintools_content.classList.remove("active")
+            transactions_content.classList.remove("active")
+            copyrights_content.classList.remove("active")
+            settings_content.classList.remove("active")
+        }
+        admintools.onclick = function() {
+            dashboard_content.classList.remove("active");
+            user_content.classList.remove("active");
+            admintools_content.classList.add("active")
+            transactions_content.classList.remove("active")
+            copyrights_content.classList.remove("active")
+            settings_content.classList.remove("active")
+        }
+        transactions.onclick = function() {
+            dashboard_content.classList.remove("active");
+            user_content.classList.remove("active");
+            admintools_content.classList.remove("active")
+            transactions_content.classList.add("active")
+            copyrights_content.classList.remove("active")
+            settings_content.classList.remove("active")
+        }
+        copyrights.onclick = function() {
+            dashboard_content.classList.remove("active");
+            user_content.classList.remove("active");
+            admintools_content.classList.remove("active")
+            transactions_content.classList.remove("active")
+            copyrights_content.classList.add("active")
+            settings_content.classList.remove("active")
+        }
+        settings.onclick = function() {
+            dashboard_content.classList.remove("active");
+            user_content.classList.remove("active");
+            admintools_content.classList.remove("active")
+            transactions_content.classList.remove("active")
+            copyrights_content.classList.remove("active")
+            settings_content.classList.add("active")
+        }
+    </script>
+
+</body>
+</html>
